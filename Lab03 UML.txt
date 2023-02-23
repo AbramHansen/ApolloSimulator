@@ -1,0 +1,36 @@
+LM
+-position : Point
+-velocity : Velocity
+-acceleration : Acceleration
+-fuel : Double
+
+-weight : Double{readOnly}
+-thrust : Double{readOnly}
+-gravity : Double{readOnly}
+------------------------------------
++update(angle : Double, isThrustOn : Boolean, isRotating : Boolean)
+-updatePosition()
++getPosition() : Point
+
+
+Velocity
+-velX : Double
+-velY : Double
+-total : Double
+------------------------------------------
++update(acc : Acceleration)
++getVelX() : Double
++getVelY() : Double
+
+
+Acceleration
+-accX : Double
+-accY : Double
+-total : Double
+-----------------------------------------------
++getAccX() : Double
++getAccY() : Double
++computeComponents(angle : Double, gravity : Double)
+-computeH(angle : Double)
+-computeV(angle : Double)
+-computeT()
